@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>몽잘 '팍쿨 바디워시' 피트니스센터 제휴 제안</title>
+    <title>몽잘 '팍쿨 바디워시' 피트니스센터 제휴 제안 (반응형)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,31 +14,53 @@
             font-family: 'Noto Sans KR', sans-serif;
             background-color: #f0f2f5;
         }
+        /* 데스크톱에서는 슬라이드 형태, 모바일에서는 일반 콘텐츠 섹션 형태로 보이도록 설정 */
         .slide {
-            width: 1280px;
-            height: 720px;
+            width: 100%;
+            max-width: 1280px; /* 데스크톱 최대 너비 */
+            min-height: 720px; /* 데스크톱 최소 높이 */
             background-color: white;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            margin: 40px auto;
-            padding: 60px 80px;
+            margin: 2.5rem auto; /* 위아래 여백 */
+            padding: 2rem 2.5rem; /* 모바일 기본 패딩 */
             display: flex;
             flex-direction: column;
             border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             border: 1px solid #e5e7eb;
         }
+        /* md(768px) 이상 화면에서 데스크톱 스타일 적용 */
+        @media (min-width: 768px) {
+            .slide {
+                padding: 60px 80px;
+            }
+        }
         .slide-title {
-            font-size: 2.8rem;
+            font-size: 2rem; /* 모바일 기본 타이틀 크기 */
             font-weight: 900;
             color: #1f2937;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 4px solid #3b82f6;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #3b82f6;
+        }
+        @media (min-width: 768px) {
+            .slide-title {
+                font-size: 2.8rem; /* 데스크톱 타이틀 크기 */
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+                border-bottom-width: 4px;
+            }
         }
         .slide-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.125rem; /* 모바일 부제 크기 */
             font-weight: 500;
             color: #4b5563;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        @media (min-width: 768px) {
+            .slide-subtitle {
+                font-size: 1.5rem; /* 데스크톱 부제 크기 */
+                margin-bottom: 2.5rem;
+            }
         }
         .highlight {
             color: #3b82f6;
@@ -50,10 +72,10 @@
 
     <!-- Slide 1: 개요 -->
     <section class="slide justify-center text-center bg-gray-50">
-        <h1 class="text-6xl font-black text-gray-800">뜨거운 여름, <span class="text-blue-600">쿨한 비즈니스!</span></h1>
-        <p class="text-4xl font-bold text-gray-700 mt-4">몽잘(Monzal) '팍쿨 바디워시'</p>
-        <p class="text-3xl text-gray-600 mt-2">피트니스센터 제휴 제안서</p>
-        <div class="mt-12 text-xl text-gray-500">
+        <h1 class="text-4xl md:text-6xl font-black text-gray-800">뜨거운 여름, <span class="text-blue-600">쿨한 비즈니스!</span></h1>
+        <p class="text-2xl md:text-4xl font-bold text-gray-700 mt-4">몽잘(Monzal) '팍쿨 바디워시'</p>
+        <p class="text-xl md:text-3xl text-gray-600 mt-2">피트니스센터 제휴 제안서</p>
+        <div class="mt-8 md:mt-12 text-base md:text-xl text-gray-500">
             <p>회원 만족도와 센터 수익을 동시에 잡는 새로운 파트너십을 제안합니다.</p>
         </div>
     </section>
@@ -62,17 +84,17 @@
     <section class="slide">
         <h2 class="slide-title">01. 시장 기회 및 현황</h2>
         <p class="slide-subtitle">지금이 바로 '쿨링' 제품이 필요한 최적의 시기입니다.</p>
-        <div class="flex-grow grid grid-cols-3 gap-8 text-lg">
-            <div class="bg-blue-50 p-6 rounded-lg">
-                <h3 class="font-bold text-2xl text-blue-800 mb-3"><i class="fa-solid fa-temperature-high mr-2"></i>여름철 트렌드</h3>
+        <div class="flex-grow flex flex-col md:flex-row gap-6 md:gap-8 text-base md:text-lg">
+            <div class="bg-blue-50 p-6 rounded-lg flex-1">
+                <h3 class="font-bold text-xl md:text-2xl text-blue-800 mb-3"><i class="fa-solid fa-temperature-high mr-2"></i>여름철 트렌드</h3>
                 <p>역대급 무더위가 예상되는 올여름, '쿨링' 키워드는 소비의 핵심입니다. 운동 후 상쾌함을 찾는 고객들의 니즈가 폭발적으로 증가합니다.</p>
             </div>
-            <div class="bg-green-50 p-6 rounded-lg">
-                <h3 class="font-bold text-2xl text-green-800 mb-3"><i class="fa-solid fa-users mr-2"></i>피트니스 고객 니즈</h3>
+            <div class="bg-green-50 p-6 rounded-lg flex-1">
+                <h3 class="font-bold text-xl md:text-2xl text-green-800 mb-3"><i class="fa-solid fa-users mr-2"></i>피트니스 고객 니즈</h3>
                 <p>운동 효과를 극대화하고 땀과 열을 식혀줄 제품에 대한 요구가 높습니다. 센터 내에서 검증된 제품을 바로 구매하길 원합니다.</p>
             </div>
-            <div class="bg-yellow-50 p-6 rounded-lg">
-                <h3 class="font-bold text-2xl text-yellow-800 mb-3"><i class="fa-solid fa-box-check mr-2"></i>성공적인 샘플링</h3>
+            <div class="bg-yellow-50 p-6 rounded-lg flex-1">
+                <h3 class="font-bold text-xl md:text-2xl text-yellow-800 mb-3"><i class="fa-solid fa-box-check mr-2"></i>성공적인 샘플링</h3>
                 <p>최근 100개 피트니스 센터에 제공된 샘플을 통해 <b class="highlight">제품의 효과와 높은 만족도</b>를 이미 확인했습니다. 이제는 수익 창출의 기회입니다.</p>
             </div>
         </div>
@@ -82,16 +104,16 @@
     <section class="slide">
         <h2 class="slide-title">02. 두 가지 파트너십 모델</h2>
         <p class="slide-subtitle">센터의 운영 방식에 맞춰 가장 유리한 모델을 선택하세요.</p>
-        <div class="flex-grow flex gap-10">
-            <div class="w-1/2 border-4 border-blue-500 rounded-xl p-8 text-center flex flex-col justify-center">
-                <i class="fa-solid fa-handshake text-6xl text-blue-500 mb-4"></i>
-                <h3 class="text-4xl font-bold mb-2">수수료형 판매 (Agency)</h3>
-                <p class="text-xl text-gray-600"><b>재고 부담 없이</b> 링크와 배너만으로<br>판매 건당 <b>고정 수익</b> 발생</p>
+        <div class="flex-grow flex flex-col md:flex-row gap-6 md:gap-10">
+            <div class="w-full md:w-1/2 border-4 border-blue-500 rounded-xl p-6 md:p-8 text-center flex flex-col justify-center">
+                <i class="fa-solid fa-handshake text-5xl md:text-6xl text-blue-500 mb-4"></i>
+                <h3 class="text-2xl md:text-4xl font-bold mb-2">수수료형 판매 (Agency)</h3>
+                <p class="text-base md:text-xl text-gray-600"><b>재고 부담 없이</b> 링크와 배너만으로<br>판매 건당 <b>고정 수익</b> 발생</p>
             </div>
-            <div class="w-1/2 border-4 border-gray-700 rounded-xl p-8 text-center flex flex-col justify-center">
-                <i class="fa-solid fa-boxes-stacked text-6xl text-gray-700 mb-4"></i>
-                <h3 class="text-4xl font-bold mb-2">매입형 판매 (Retail)</h3>
-                <p class="text-xl text-gray-600">직접 제품을 매입하여<br><b>수익을 극대화</b>하는 방식</p>
+            <div class="w-full md:w-1/2 border-4 border-gray-700 rounded-xl p-6 md:p-8 text-center flex flex-col justify-center">
+                <i class="fa-solid fa-boxes-stacked text-5xl md:text-6xl text-gray-700 mb-4"></i>
+                <h3 class="text-2xl md:text-4xl font-bold mb-2">매입형 판매 (Retail)</h3>
+                <p class="text-base md:text-xl text-gray-600">직접 제품을 매입하여<br><b>수익을 극대화</b>하는 방식</p>
             </div>
         </div>
     </section>
@@ -100,9 +122,9 @@
     <section class="slide">
         <h2 class="slide-title">03. 수수료형 판매 (Agency) 상세</h2>
         <p class="slide-subtitle">가장 쉽고 안전하게 부가 수익을 창출하는 방법입니다.</p>
-        <div class="flex-grow grid grid-cols-2 gap-8 text-xl">
+        <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 text-base md:text-xl">
             <div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">▶ 운영 방식</h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">▶ 운영 방식</h3>
                 <ul class="list-disc list-inside space-y-3">
                     <li><b>신청:</b> 제공된 URL을 통해 간편하게 신청</li>
                     <li><b>승인:</b> 담당자 승인 후 <b class="highlight">전용 판매 링크 & A5 아크릴 배너</b> 제공</li>
@@ -111,7 +133,7 @@
                 </ul>
             </div>
             <div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">▶ 수익 구조 및 장점</h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">▶ 수익 구조 및 장점</h3>
                 <ul class="list-disc list-inside space-y-3">
                     <li><b>수익:</b> 판매 1건당 <b class="text-red-600 font-bold">5,000원</b>의 높은 리워드</li>
                     <li><b class="highlight">초기 투자 비용 0원</b></li>
@@ -126,9 +148,9 @@
     <section class="slide">
         <h2 class="slide-title">04. 매입형 판매 (Retail) 상세</h2>
         <p class="slide-subtitle">센터의 새로운 주력 상품으로 수익을 극대화하세요.</p>
-        <div class="flex-grow grid grid-cols-2 gap-8 text-xl">
+        <div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 text-base md:text-xl">
             <div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">▶ 운영 방식 및 조건</h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">▶ 운영 방식 및 조건</h3>
                 <ul class="list-disc list-inside space-y-3">
                     <li><b>발주:</b> 몽잘 브랜드 담당자에게 직접 발주</li>
                     <li><b>최소수량:</b> <b class="highlight">10개</b>부터 (부담 없는 소량 주문)</li>
@@ -137,7 +159,7 @@
                 </ul>
             </div>
             <div>
-                <h3 class="text-2xl font-bold mb-4 text-gray-800">▶ 장점 및 프로모션</h3>
+                <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">▶ 장점 및 프로모션</h3>
                 <ul class="list-disc list-inside space-y-3">
                     <li><b class="highlight">높은 판매 마진율</b>로 센터 수익 직접 증대</li>
                     <li>센터만의 <b class="highlight">차별화된 상품 라인업</b> 구축</li>
@@ -152,40 +174,40 @@
     <section class="slide">
         <h2 class="slide-title">05. 한눈에 보는 파트너십 비교</h2>
         <p class="slide-subtitle">어떤 방식이 우리 센터에 가장 적합할까요?</p>
-        <div class="flex-grow">
-            <table class="w-full text-left border-collapse text-xl">
+        <div class="flex-grow overflow-x-auto">
+            <table class="w-full min-w-[600px] text-left border-collapse text-base md:text-xl">
                 <thead>
                     <tr class="bg-gray-800 text-white">
-                        <th class="p-4 w-1/4">구분</th>
-                        <th class="p-4 text-center bg-blue-600">수수료형 (Agency)</th>
-                        <th class="p-4 text-center">매입형 (Retail)</th>
+                        <th class="p-3 md:p-4 w-1/4">구분</th>
+                        <th class="p-3 md:p-4 text-center bg-blue-600">수수료형 (Agency)</th>
+                        <th class="p-3 md:p-4 text-center">매입형 (Retail)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="border-b">
-                        <td class="p-4 font-bold">초기 비용</td>
-                        <td class="p-4 text-center text-blue-600 font-bold">없음 (ZERO)</td>
-                        <td class="p-4 text-center">제품 매입비 발생</td>
+                        <td class="p-3 md:p-4 font-bold">초기 비용</td>
+                        <td class="p-3 md:p-4 text-center text-blue-600 font-bold">없음 (ZERO)</td>
+                        <td class="p-3 md:p-4 text-center">제품 매입비 발생</td>
                     </tr>
                     <tr class="border-b bg-gray-50">
-                        <td class="p-4 font-bold">재고 관리</td>
-                        <td class="p-4 text-center text-blue-600 font-bold">필요 없음</td>
-                        <td class="p-4 text-center">직접 관리</td>
+                        <td class="p-3 md:p-4 font-bold">재고 관리</td>
+                        <td class="p-3 md:p-4 text-center text-blue-600 font-bold">필요 없음</td>
+                        <td class="p-3 md:p-4 text-center">직접 관리</td>
                     </tr>
                     <tr class="border-b">
-                        <td class="p-4 font-bold">수익 구조</td>
-                        <td class="p-4 text-center">판매 건당 5,000원 (고정)</td>
-                        <td class="p-4 text-center font-bold">높은 판매 마진 (자율 책정)</td>
+                        <td class="p-3 md:p-4 font-bold">수익 구조</td>
+                        <td class="p-3 md:p-4 text-center">판매 건당 5,000원 (고정)</td>
+                        <td class="p-3 md:p-4 text-center font-bold">높은 판매 마진 (자율 책정)</td>
                     </tr>
                     <tr class="border-b bg-gray-50">
-                        <td class="p-4 font-bold">운영 편의성</td>
-                        <td class="p-4 text-center font-bold">최상 (배너 비치만으로 끝)</td>
-                        <td class="p-4 text-center">중 (발주/재고/판매 관리)</td>
+                        <td class="p-3 md:p-4 font-bold">운영 편의성</td>
+                        <td class="p-3 md:p-4 text-center font-bold">최상 (배너 비치만으로 끝)</td>
+                        <td class="p-3 md:p-4 text-center">중 (발주/재고/판매 관리)</td>
                     </tr>
                     <tr class="border-b">
-                        <td class="p-4 font-bold">추천 대상</td>
-                        <td class="p-4 text-center"><b>부가 수익을 쉽고 안전하게</b> 만들고 싶은 센터</td>
-                        <td class="p-4 text-center"><b>새로운 수익원을 적극적으로</b> 만들고 싶은 센터</td>
+                        <td class="p-3 md:p-4 font-bold">추천 대상</td>
+                        <td class="p-3 md:p-4 text-center"><b>부가 수익을 쉽고 안전하게</b> 만들고 싶은 센터</td>
+                        <td class="p-3 md:p-4 text-center"><b>새로운 수익원을 적극적으로</b> 만들고 싶은 센터</td>
                     </tr>
                 </tbody>
             </table>
@@ -196,47 +218,45 @@
     <section class="slide">
         <h2 class="slide-title">06. 파트너십 기대 효과</h2>
         <p class="slide-subtitle">단순한 제품 판매를 넘어, 센터의 가치를 높입니다.</p>
-        <div class="flex-grow flex items-center justify-around text-center text-2xl">
-            <div class="w-1/3">
-                <i class="fas fa-chart-line text-7xl text-green-500 mb-6"></i>
-                <h3 class="font-bold text-3xl mb-2">새로운 수익 창출</h3>
-                <p class="text-xl text-gray-600">임대료, 인건비 외 추가적인<br>수익 파이프라인 확보</p>
+        <div class="flex-grow flex flex-col md:flex-row items-center justify-around text-center gap-8 md:gap-0">
+            <div class="w-full md:w-1/3">
+                <i class="fas fa-chart-line text-6xl md:text-7xl text-green-500 mb-4 md:mb-6"></i>
+                <h3 class="font-bold text-2xl md:text-3xl mb-2">새로운 수익 창출</h3>
+                <p class="text-base md:text-xl text-gray-600">임대료, 인건비 외 추가적인<br>수익 파이프라인 확보</p>
             </div>
-            <div class="w-1/3">
-                <i class="fas fa-smile-beam text-7xl text-yellow-500 mb-6"></i>
-                <h3 class="font-bold text-3xl mb-2">회원 만족도 증대</h3>
-                <p class="text-xl text-gray-600">운동 후 상쾌함을 제공하는<br>차별화된 고객 경험</p>
+            <div class="w-full md:w-1/3">
+                <i class="fas fa-smile-beam text-6xl md:text-7xl text-yellow-500 mb-4 md:mb-6"></i>
+                <h3 class="font-bold text-2xl md:text-3xl mb-2">회원 만족도 증대</h3>
+                <p class="text-base md:text-xl text-gray-600">운동 후 상쾌함을 제공하는<br>차별화된 고객 경험</p>
             </div>
-            <div class="w-1/3">
-                <i class="fas fa-gem text-7xl text-purple-500 mb-6"></i>
-                <h3 class="font-bold text-3xl mb-2">센터 경쟁력 강화</h3>
-                <p class="text-xl text-gray-600">트렌디한 제품 판매를 통한<br>센터 이미지 제고</p>
+            <div class="w-full md:w-1/3">
+                <i class="fas fa-gem text-6xl md:text-7xl text-purple-500 mb-4 md:mb-6"></i>
+                <h3 class="font-bold text-2xl md:text-3xl mb-2">센터 경쟁력 강화</h3>
+                <p class="text-base md:text-xl text-gray-600">트렌디한 제품 판매를 통한<br>센터 이미지 제고</p>
             </div>
         </div>
     </section>
 
     <!-- Slide 8: 콜투액션 -->
     <section class="slide justify-center items-center text-center bg-blue-600 text-white">
-        <h2 class="text-6xl font-black">지금 바로 시작하세요!</h2>
-        <p class="text-3xl mt-4 mb-10">센터에 가장 적합한 파트너십을 선택하고 새로운 기회를 만드세요.</p>
+        <h2 class="text-4xl md:text-6xl font-black">지금 바로 시작하세요!</h2>
+        <p class="text-xl md:text-3xl mt-4 mb-8 md:mb-10">센터에 가장 적합한 파트너십을 선택하고 새로운 기회를 만드세요.</p>
         
-        <div class="w-full flex justify-around">
-            <div>
-                <h3 class="text-2xl font-bold mb-2">▶ 수수료형 신청 (Agency)</h3>
-                <br>
-                <a href="https://linkd.kr/ambassador/application/request/996" target="_blank" class="text-xl bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors">
+        <div class="w-full flex flex-col md:flex-row justify-around items-center gap-6 md:gap-0">
+            <div class="w-full md:w-auto">
+                <h3 class="text-xl md:text-2xl font-bold mb-2">▶ 수수료형 신청 (Agency)</h3>
+                <a href="https://linkd.kr/ambassador/application/request/996" target="_blank" class="text-base md:text-xl bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors inline-block">
                     온라인 신청서 바로가기 <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-            <div>
-                <h3 class="text-2xl font-bold mb-2">▶ 매입형 문의 (Retail)</h3>
-                <br>
-                <p class="text-xl bg-white text-gray-800 font-bold py-3 px-6 rounded-lg">
+            <div class="w-full md:w-auto">
+                <h3 class="text-xl md:text-2xl font-bold mb-2">▶ 매입형 문의 (Retail)</h3>
+                <p class="text-base md:text-xl bg-white text-gray-800 font-bold py-3 px-6 rounded-lg">
                     <i class="fa-solid fa-phone mr-2"></i> 몽잘 브랜드 담당자: 010-1234-5678
                 </p>
             </div>
         </div>
-        <p class="mt-12 text-lg">궁금한 점이 있으시면 언제든지 편하게 연락 주십시오.</p>
+        <p class="mt-8 md:mt-12 text-base md:text-lg">궁금한 점이 있으시면 언제든지 편하게 연락 주십시오.</p>
     </section>
 
 </body>
